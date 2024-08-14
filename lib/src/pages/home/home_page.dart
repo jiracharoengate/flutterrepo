@@ -1,3 +1,4 @@
+import 'package:cmflutter0/src/services/webapi_service.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -8,6 +9,14 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomepageState extends State<HomePage> {
+
+  //จะถูกเรียก อัตโนมัติ เมื่อ Widget กำลังจะ render โดย สามารถจะ initial ค่าก่อนที่มันจะ render ได้
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    WebApiService().feed();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
