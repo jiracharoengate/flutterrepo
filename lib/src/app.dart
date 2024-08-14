@@ -12,6 +12,10 @@ class CMApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final loginBloc = BlocProvider(create: (context) =>LoginBloc());
 
+
+
+
+
     return MultiBlocProvider(
         providers: [loginBloc],
         child: MaterialApp(
